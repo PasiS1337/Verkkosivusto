@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>It's Ya Boy's website</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    
+    <nav>
+        <ul class="nav-list">
+            <li class="logo"><a href="index.html">It's Ya Boy</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="index.html">Home</a></li>
+                
+
+            <!-- En saanu tota close menuu mitenkää toimii ni luovutin sen suhteen ja hyväksyin sen, et tos on sit vaa toi menu icon mitä klikkaamal uusiks saa sen hampurilaisvalikon piilotettuu :D -->
+            <div class="hamburger-menu">
+                <img src="images/Hamburger menu.svg" alt="Hamburger Menu" class="hamburger-icon">
+                <img src="images/Menu close icon.svg" alt="Close Icon" class="close-icon hidden">
+            </div>
+            
+            
+            <!-- Hampurilaisvalikon menu sillonku näytön leveys alle 600px -->
+            <div class="additional-links">
+                <a href="index.html">Home</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </ul>
+    </nav>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const hamburgerMenu = document.querySelector('.hamburger-menu');
+                const navigation = document.querySelector('.nav-list');
+                const additionalLinks = document.querySelector('.additional-links');
+                const hamburgerIcon = document.querySelector('.hamburger-icon');
+                const closeIcon = document.querySelector('.close-icon');
+
+            hamburgerMenu.addEventListener('click', () => {
+                navigation.classList.toggle('show');
+                additionalLinks.classList.toggle('show');
+                hamburgerIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
+                });
+            });
+        </script>
+
+        <div class="portfolio-content">                                                                                                 <!-- alt texts-->
+            <iframe width="520" height="295" src="https://www.youtube.com/embed/YVV2mmT1dHY" frameborder="0" allowfullscreen title="Video edit about heisenberg"></iframe>
+            <iframe width="520" height="295" src="https://www.youtube.com/embed/qRhWB14BSTo" frameborder="0" allowfullscreen title="Video edit about anime"></iframe>
+            <iframe width="520" height="295" src="https://www.youtube.com/embed/SOTMB6gLwMo" frameborder="0" allowfullscreen title="Video edit of my calisthenics progression"></iframe>
+        </div>
+
+            <div class="portfolio-text">
+                <p>It's your main man, Pasi S, back at it again with some mind-blowing edits</p>
+                <p>I've been editing for a couple of years now (on and off) and only recently got interested in making some of those "cool" edits you see on TikTok/Youtube etc.</p>
+                <p>Currently I haven't made any edits for companies ":D" but I could just as easily whip out an IBM edit because the skills from making anime/tv/random edits (CC, VFX, </p>
+                <p>SFX, Sound/Music Sync and Transitions especially all transfer very well.</p>
+                <p>The software I use is called DaVinci Resolve 18.6 from BlackMagic Design. I've also tried Adobe After Effects but personally I enjoy the node based system that's in Fusion </p>
+                <p>way more than the layer-based system.</p>
+            </div>
+
+            
+        <footer>
+            <p>&copy; 2024 It's Ya Boy.</p>
+        </footer>
+</body>
+</html>

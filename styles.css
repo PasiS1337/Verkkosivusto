@@ -1,0 +1,323 @@
+body {  
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('images/PexelsBackgroundImage.jpg'); /* Sivun background image */
+    background-size: cover;
+    background-repeat: no-repeat;           
+    background-position: center top;
+    background-attachment: fixed;
+}
+
+nav {   /* nav.naarin customisointii */
+    background: linear-gradient(to right, #AE00FF, #2E8BF3);
+    overflow: hidden;
+    height: 100px;    
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {   /* Services/portfolio/contact näppäinten customisointii */
+    float: right;
+    font-size: 35px;
+    font-weight: bold;
+    margin-right: 100px;
+    margin-top: 0;   
+}
+
+.nav-item {
+    margin-top: 0; 
+}
+
+li.logo {
+    float: left;
+}
+
+a {
+    display: block;
+    color: white; 
+    text-align: center;
+    padding: 18px 16px;
+    text-decoration: none;
+    line-height: 70px;
+    transition: background-color 0.4s ease;  /* smooth transitioni background värille nav baarissa */
+    border-radius: 15px;        /* pyöristetyt kulmat background-värille nav baarissa */
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+a:hover {  /* muuttaa näppäinten taustavärin sillonku sen päältä hoveraa hiirel */
+    background-color: rgb(206, 10, 255);
+}
+
+/* Its Ya Boy logon customisointii */
+li.logo a {
+    color: white;
+    padding: 14px 100px; 
+    font-size: 55px;
+}
+
+/* hampurilaisvalikon sijoitus */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    right: 50px; 
+    top: 30px;
+}
+
+.additional-links {
+    display: none;
+}
+
+.additional-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 130px; /* hampurilaisvalikon korkeus avatessa */
+    right: 50px; /* hampurilaisvalikon leveys avatessa */
+}
+
+.additional-links a {
+    font-size: 20px; /* hampurilaisvalikon tekstien customisointii */
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+    /* p tägien (tekstin) sijoitus keskelle ruutuu */
+.main-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+    /* p tägien (tekstin) customisointii */
+.main-content p {
+    font-size: 70px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 2s ease-out;
+}
+
+/* Tekstin (p tägien) animointi ruudulle, kestää 2s ennenku opacity menee 0% --> 100% */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Opacity alussa 0% eli ei näkyvissä ja sit se tulee gradually esille seuraavan 2s aikana sivun loadaamisesta */
+        transform: translateY(20px); /* Optional: Siirtää tekstii 20px ylöspäin animaation aikana */
+    }
+    to {
+        opacity: 1; /* 2s jälkeen opacity 100% eli täysin näkyvissä */
+        transform: translateY(0); 
+    }
+}
+
+/* portfolio sivun customisointii / videoiden asettelu oikeeseen kohtaan */
+.portfolio-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.portfolio-content iframe {
+    margin-right: 100px; /* videoiden välissä oleva tyhjä tila ettei ne oo kiinni toisissaan */   
+}
+
+.portfolio-content iframe:last-child {
+    margin-right: 0; 
+}
+
+.portfolio-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    margin-left: 80px;
+    margin-top: 40px;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+
+}
+
+.services-teksti {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.services-teksti2 {
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    margin-left: 60px;
+}
+
+.services-palvelut1 {
+    position: fixed;
+    top: 0;
+    right: 350px;
+    margin: 80px;
+    padding: 10px; 
+    z-index: 999; 
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+.services-palvelut2 {
+    position: fixed;
+    top: 200px;
+    right: 100px; /* Adjust this value to move it right */
+    margin-right: 200px; /* Additional margin for fine-tuning */
+    margin-top: 80px;
+    padding: 10px; 
+    z-index: 999; 
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.services-sijoitus {
+    margin-left: 20px;
+}
+
+footer {
+    color: white; /* Set the text color */
+    text-align: center; /* Center-align text within the footer */
+    padding: 10px; /* Add some padding to the footer for spacing */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Apply these styles to the container holding your contact information */
+.contact-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* This ensures that the container takes the full height of the viewport */
+    text-align: center; /* Center the text horizontally */
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+
+}
+
+/* Add some styling to the disclaimer if needed */
+.disclaimer {
+    margin-top: 20px; /* Adjust as needed for spacing */
+    color: rgb(82, 202, 118); /* Adjust the color as needed */
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+}
+
+
+
+
+
+
+/* Adjustaa sivustoo, sillonku laitteen näytön leveys on alle 600px */
+@media screen and (max-width: 600px) {
+
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-list li {
+        display: block; 
+    }
+
+    .show .nav-list li {
+        display: none; 
+    }
+
+    .show .additional-links {
+        display: flex; 
+    }
+
+    .hamburger-menu {
+        display: flex;
+        align-items: center;
+    }
+
+    .hamburger-icon, .close-icon {
+        display: inline-block;
+        width: 30px; 
+    }
+
+    .close-icon {
+        display: none; 
+        position: absolute;
+        right: 50px; 
+        top: 30px; 
+    }
+    
+    li.logo a {
+        font-size: 30px; 
+    }
+
+    .main-content p {
+        font-size: 40px; /* Adjustaa Home pagen fonttikoon pienemmäks mobiililla */
+    }
+
+
+    /* Adjustaa Services sivun mobiilille sopivaks */
+    .services-palvelut1,
+    .services-palvelut2 {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin: 20px; 
+        font-size: 20px; 
+    }
+
+    .services-sijoitus {
+        margin-left: 20;
+    }
+
+    .portfolio-content {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px; 
+    }
+
+    .portfolio-content iframe {
+        margin-right: 0; 
+        margin-bottom: 20px; 
+        width: 80%; /* Ettei videot oo ihan kiinni reunassa */
+    }
+
+    .portfolio-text {
+        font-size: 16px; 
+        margin-left: 5; 
+        margin-top: 20px; 
+    }
+    
+    .contact-main {
+        font-size: 20px; 
+    }
+}
+
+    
+    
+
+   
+
+
+
+
+
+
