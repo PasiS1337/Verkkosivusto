@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>It's Ya Boy's website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav>
+        <ul class="nav-list">
+            <li class="logo"><a href="index.html">It's Ya Boy</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="index.html">Home</a></li>
+    
+            <!-- En saanu tota close menuu mitenkää toimii ni luovutin sen suhteen ja hyväksyin sen, et tos on sit vaa toi menu icon mitä klikkaamal uusiks saa sen hampurilaisvalikon piilotettuu :D -->
+            <div class="hamburger-menu">
+                <img src="images/Hamburger menu.svg" alt="Hamburger Menu" class="hamburger-icon">
+                <img src="images/Menu close icon.svg" alt="Close Icon" class="close-icon hidden">
+            </div>
+    
+            <!-- Hampurilaisvalikon menu sillonku näytön leveys alle 600px -->
+            <div class="additional-links">
+                <a href="index.html">Home</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </ul>
+    </nav>
+    
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const hamburgerMenu = document.querySelector('.hamburger-menu');
+                const navigation = document.querySelector('.nav-list');
+                const additionalLinks = document.querySelector('.additional-links');
+                const hamburgerIcon = document.querySelector('.hamburger-icon');
+                const closeIcon = document.querySelector('.close-icon');
+
+            hamburgerMenu.addEventListener('click', () => {
+                navigation.classList.toggle('show');
+                additionalLinks.classList.toggle('show');
+                hamburgerIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
+                });
+            });
+        </script>
+
+        <div class="main-content">
+            <p>Cutting-Edge Edits for </p>
+            <p>Cutting-Edge Social Influencers</p>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 It's Ya Boy.</p>
+        </footer>
+
+</body>
+</html>

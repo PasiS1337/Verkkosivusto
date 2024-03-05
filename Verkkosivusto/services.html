@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>It's Ya Boy's website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <nav>
+        <ul class="nav-list">
+            <li class="logo"><a href="index.html">It's Ya Boy</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="index.html">Home</a></li>
+                
+
+            <!-- En saanu tota close menuu mitenkää toimii ni luovutin sen suhteen ja hyväksyin sen, et tos on sit vaa toi menu icon mitä klikkaamal uusiks saa sen hampurilaisvalikon piilotettuu :D -->
+            <div class="hamburger-menu">
+                <img src="images/Hamburger menu.svg" alt="Hamburger Menu" class="hamburger-icon">
+                <img src="images/Menu close icon.svg" alt="Close Icon" class="close-icon hidden">
+            </div>
+            
+            
+            <!-- Hampurilaisvalikon menu sillonku näytön leveys alle 600px -->
+            <div class="additional-links">
+                <a href="index.html">Home</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </ul>
+    </nav>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const hamburgerMenu = document.querySelector('.hamburger-menu');
+                const navigation = document.querySelector('.nav-list');
+                const additionalLinks = document.querySelector('.additional-links');
+                const hamburgerIcon = document.querySelector('.hamburger-icon');
+                const closeIcon = document.querySelector('.close-icon');
+
+            hamburgerMenu.addEventListener('click', () => {
+                navigation.classList.toggle('show');
+                additionalLinks.classList.toggle('show');
+                hamburgerIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
+                });
+            });
+        </script>
+
+    <div class="services-sijoitus">
+            <p class="services-teksti">Greetings, Friend! Do YOU want your customers that watch </p>
+            <p class="services-teksti">your company's advertisement videos to go from this</p>
+        <div class="services-image1">
+            <img src="images/cerealInMouth.png" width="300" height="200" alt="Image of a guy peacefully eating his cereals">
+        </div>
+            <p class="services-teksti2">to THIS?</p>
+        <div class="services-image2">
+            <img src="images/CerealSpitOut.png" width="400" height="250" alt="Image of a guy spitting cereals out of his mouth due to being shocked by something amazing">
+        </div>
+        <p class="services-teksti">Well you've come to the right place</p>
+    </div>
+
+    <div class="services-palvelut1">
+        <p>My services</p>
+    </div>
+    <div class="services-palvelut2">
+        <p>My services include, but are not limited to:</p>
+        <p>Advertisement video edits for your company,</p>
+        <p>wedding videos, creating highlight reels, you name it.</p>
+        <p>Anything related to making your vision come true.</p>
+    </div>
+
+
+    
+    <footer>
+        <p>&copy; 2024 It's Ya Boy.</p>
+    </footer>
+</body>
+</html>
