@@ -176,8 +176,8 @@ li.logo a {
 .services-palvelut2 {
     position: fixed;
     top: 200px;
-    right: 100px; /* Adjust this value to move it right */
-    margin-right: 200px; /* Additional margin for fine-tuning */
+    right: 100px; 
+    margin-right: 200px; 
     margin-top: 80px;
     padding: 10px; 
     z-index: 999; 
@@ -192,22 +192,22 @@ li.logo a {
 }
 
 footer {
-    color: white; /* Set the text color */
-    text-align: center; /* Center-align text within the footer */
-    padding: 10px; /* Add some padding to the footer for spacing */
+    color: white; 
+    text-align: center; 
+    padding: 10px; 
     position: fixed;
     bottom: 0;
     width: 100%;
 }
 
-/* Apply these styles to the container holding your contact information */
+
 .contact-main {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* This ensures that the container takes the full height of the viewport */
-    text-align: center; /* Center the text horizontally */
+    height: 100vh; 
+    text-align: center; 
     font-size: 30px;
     color: white;
     font-weight: bold;
@@ -215,14 +215,13 @@ footer {
 
 }
 
-/* Add some styling to the disclaimer if needed */
+
 .disclaimer {
-    margin-top: 20px; /* Adjust as needed for spacing */
-    color: rgb(82, 202, 118); /* Adjust the color as needed */
+    margin-top: 20px; 
+    color: rgb(82, 202, 118); 
     text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
     font-weight: bold;
 }
-
 
 
 
@@ -236,12 +235,12 @@ footer {
         align-items: center;
     }
 
-    .nav-list li {
-        display: block; 
+    .nav-list li:not(.logo) {
+        display: none; 
     }
 
     .show .nav-list li {
-        display: none; 
+        display: block; 
     }
 
     .show .additional-links {
@@ -266,15 +265,13 @@ footer {
     }
     
     li.logo a {
-        font-size: 30px; 
+        font-size: 25px; 
     }
 
     .main-content p {
-        font-size: 40px; /* Adjustaa Home pagen fonttikoon pienemmäks mobiililla */
+        font-size: 40px;
     }
 
-
-    /* Adjustaa Services sivun mobiilille sopivaks */
     .services-palvelut1,
     .services-palvelut2 {
         position: relative;
@@ -297,7 +294,7 @@ footer {
     .portfolio-content iframe {
         margin-right: 0; 
         margin-bottom: 20px; 
-        width: 80%; /* Ettei videot oo ihan kiinni reunassa */
+        width: 80%;
     }
 
     .portfolio-text {
@@ -309,15 +306,124 @@ footer {
     .contact-main {
         font-size: 20px; 
     }
+    
+    li:not(.logo) {
+        display: block; 
+    }
+    .services-palvelut2 {
+        font-size: 12px;
+        margin-right: 80px;
+    }
 }
 
-    
-    
 
+        
+
+
+
+/* Adjustaa nav baarin icons/fonttikokoi ynms erikokosille screeneille */
+@media screen and (max-width: 1600px) {
+    li {
+        font-size: 32px;
+        margin-right: 80px; 
+    }
+    .main-content p {
+        font-size: 70px; 
+    }
+    .services-palvelut2 {
+        font-size: 22px;
+        margin-right: 180px;
+    }
+}
+
+
+@media screen and (max-width: 1400px) {
+    li {
+        font-size: 30px;
+        margin-right: 60px;
+    }
+    .main-content p {
+        font-size: 65px; 
+    }
+    .services-palvelut2 {
+        font-size: 20px;
+        margin-right: 160px;
+    }
+    .services-palvelut1 {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin: 20px auto;
+    }
+
+    .services-palvelut2 {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-right: auto;
+        margin-top: 20px;
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    li {
+        font-size: 28px;
+        margin-right: 40px;
+    }
+    .main-content p {
+        font-size: 60px; 
+    }
+    .services-palvelut2 {
+        font-size: 18px;
+        margin-right: 140px;
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    li {
+        font-size: 26px;
+        margin-right: 30px;
+    }
+    .main-content p {
+        font-size: 55px; 
+    }
+    .services-palvelut2 {
+        font-size: 16px;
+        margin-right: 120px;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    li {
+        font-size: 24px;
+        margin-right: 20px;
+    }
+    .main-content p {
+        font-size: 40px; 
+    }
+
+}
    
 
 
-
-
+@media screen and (max-width: 450px) {
+    li {
+        font-size: 20px;
+        margin-right: 5px;
+    }
+    .main-content p {
+        font-size: 30px; 
+    }
+    .main-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-80%, -50%); /* siirtää mobilella ton main textin pois hampurilaisvalikon tieltä */
+        text-align: left;
+    }
+}
 
 
