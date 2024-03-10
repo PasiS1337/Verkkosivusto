@@ -222,6 +222,22 @@ footer {
     text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
     font-weight: bold;
 }
+    /* CTA buttoni */
+.get-in-touch-button {
+    display: inline-block;
+    background-color: #AE00FF;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-size: 20px;
+    transition: background-color 0.4s ease;
+}
+    /*CTA buttonia hoveratessa väri vaihtuu siniseks*/
+.get-in-touch-button:hover {
+    background-color: #2E8BF3;
+}
 
 
 
