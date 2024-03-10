@@ -222,6 +222,7 @@ footer {
     text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
     font-weight: bold;
 }
+
     /* CTA buttoni */
 .get-in-touch-button {
     display: inline-block;
@@ -238,7 +239,6 @@ footer {
 .get-in-touch-button:hover {
     background-color: #2E8BF3;
 }
-
 
 
 
@@ -441,5 +441,7 @@ footer {
         text-align: left;
     }
 }
+
+
 
 
